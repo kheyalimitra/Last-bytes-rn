@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "android/src/main/assets/retrained_graph_v5.pb",
+      "sha1": "66c2aafb2ce9ec5d8e25e0efbefc604809f5bdd5"
+    },
+    {
+      "path": "android/src/main/assets/retrained_labels_v5.txt",
+      "sha1": "887410e63c83f47ffc9be2fbdd723aca9c0876c7"
+    }
+  ]
+}
