@@ -7,7 +7,7 @@ import com.facebook.react.ReactApplication;
 //import com.vinzscam.reactnativefileviewer.RNFileViewerPackage;
 //import com.benwixen.rnfilesystem.RNFileSystemPackage;
 //import com.vinzscam.reactnativefileviewer.RNFileViewerPackage;
-import com.rntensorflow.RNTensorFlowPackage;
+//import com.rntensorflow.RNTensorFlowPackage;
 import org.reactnative.camera.RNCameraPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -34,9 +34,9 @@ public class MainApplication extends Application implements ReactApplication {
 //            new RNFileViewerPackage(),
 //            new RNFileSystemPackage(),
 //            new RNFileViewerPackage(),
-            new RNTensorFlowPackage(),
-            new RNCameraPackage(),
-            new RNFSPackage()
+//            new RNTensorFlowPackage(),
+             new RNCameraPackage(),
+             new RNFSPackage()
       );
     }
 

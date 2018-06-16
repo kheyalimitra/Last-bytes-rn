@@ -140,8 +140,9 @@ dependencies {
 //    compile project(':react-native-filesystem')
 //    compile project(':react-native-file-viewer')
 //    compile project(':react-native-device-info')
-    compile project(':react-native-fs')
-    compile project(':react-native-tensorflow')
+      compile project(':react-native-fs')
+//    compile project(':react-native-tensorflow')
+//    compile project(':react-native-fetch')
     compile project(':react-native-camera')
     compile fileTree(dir: "libs", include: ["*.jar"])
     implementation (project(':react-native-camera')) {

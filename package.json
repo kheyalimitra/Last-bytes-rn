@@ -11,6 +11,8 @@
     "react-native": "0.55.4",
     "react-native-asset": "^1.1.2",
     "react-native-camera": "^1.1.4",
+    "react-native-convert-image-to-base64": "^0.1.0",
+    "react-native-fetch": "^2.0.0",
     "react-native-fs": "^2.10.14",
     "react-native-tensorflow": "^0.1.8"
   },
@@ -23,8 +25,8 @@
   "jest": {
     "preset": "react-native"
   },
-  "rnpm" : {
-    "assets" : [
+  "rnpm": {
+    "assets": [
       "./android/src/main/assets"
     ]
   }

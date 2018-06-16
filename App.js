@@ -9,13 +9,20 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 import Camera from 'react-native-camera';
-import { TensorFlow } from 'react-native-tensorflow';
-import { TfImageRecognition } from 'react-native-tensorflow';
-import FileSystem from 'react-native-fs';
-const label_file = 'retrained_labels_v5.txt';
+const base64 = require('base-64');
+//import ImgToBase64 from 'react-native-image-base64';
+//import { TensorFlow } from 'react-native-tensorflow';
+//import { TfImageRecognition } from 'react-native-tensorflow';
+import RNFS from 'react-native-fs';
+//const label_file = 'retrained_labels_v5.txt';
+
+
+//import Fetch from 'react-native-fetch';
+
 //const graph_file = require('./assets/retrained_graph_v5.pb');
 
 //const graph = FileSystem.readFile(graph_file, 'utf8')
@@ -53,6 +60,7 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Camera
+          captureTarget={Camera.constants.CaptureTarget.disk}
           ref={(cam) => {
             this.camera = cam
           }}
@@ -70,46 +78,27 @@ export default class App extends Component<Props> {
 
   async takePicture() {
     this.camera.capture().then(async(data) => {
-    const tf = new TensorFlow('tensorflow_inception_graph.pb')
-    console.log('tf' , tf)
-    await tf.feed({name: "inputName", data: [1,2,3], shape:[1,2,4], dtype: "int64"})
-    await tf.run(['outputNames'])
-    const output = await tf.fetch('outputName')
-    console.log('output' , output)
-//    console.log('graph: ' , graph_file)
-//    const tfImageRecognition = new TfImageRecognition({
-//      model: require('./assets/retrained_graph_v5.pb'),
-//      labels: require('./assets/retrained_labels_v5.txt'),
-//      imageMean: 117, // Optional, defaults to 117
-//      imageStd: 1 // Optional, defaults to 1
-//    })
-////       const graph = await FileSystem.readFile(graph_file)
-//       const tf = new TensorFlow(graph_file)
-//       console.warn('tf : ' , tf)
-//       await tf.feed({name: "inputName", data: [1,2,3], shape:[1,2,4], dtype: "int64"})
-//       await tf.run(['outputNames'])
-//       const output = await tf.fetch('outputName')
-//       console.warn('output: ' , output)
-
-//      console.log(data)
-//      console.log(tfImageRecognition)
-//      const results = await tfImageRecognition.recognize({
-//              image: data,
-//              inputName: "input", //Optional, defaults to "input"
-//              inputSize: 224, //Optional, defaults to 224
-//              outputName: "output", //Optional, defaults to "output"
-//              maxResults: 3, //Optional, defaults to 3
-//              threshold: 0.1, //Optional, defaults to 0.1
-//       })
-////
-//        results.forEach(result =>
-//          console.log(
-//            result.id, // Id of the result
-//            result.name, // Name of the result
-//            result.confidence // Confidence value between 0 - 1
-//          )
-//        )
-//        await tfImageRecognition.close()
+        let base64Img = data.path;
+        RNFS.readFile(Platform.OS === 'android'? base64Img.substring(7): base64Img, "base64")
+        .then((res) =>  {
+            this.setState({uri: res})
+            console.log(res);
+            fetch('https://waste-classifier-cs.cfapps.sap.hana.ondemand.com/classify', {
+            method: 'POST',
+            headers: {
+               Accept: 'application/json',
+               'Content-Type': 'application/json',
+               'Authorization': 'Basic ' + base64.encode('Ask Kheyali for credential' + ":" + 'Ask Kheyali for credential')
+            },
+            data: res
+            }).then((response) => {
+                    console.log("success response", response);
+                })
+            .catch((error) => {
+                  console.error("error ", error);
+                });
+            })
+            .catch(err => console.error(err))
 
     }).catch((error) => {
       console.error(error)
