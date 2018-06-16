@@ -14,45 +14,8 @@ import {
 } from 'react-native';
 import Camera from 'react-native-camera';
 const base64 = require('base-64');
-//import ImgToBase64 from 'react-native-image-base64';
-//import { TensorFlow } from 'react-native-tensorflow';
-//import { TfImageRecognition } from 'react-native-tensorflow';
 import RNFS from 'react-native-fs';
-//const label_file = 'retrained_labels_v5.txt';
 
-
-//import Fetch from 'react-native-fetch';
-
-//const graph_file = require('./assets/retrained_graph_v5.pb');
-
-//const graph = FileSystem.readFile(graph_file, 'utf8')
-//  .then((statResult) => {
-//    if (statResult[0].isFile()) {
-//    console.warn(statResult);
-//      return statResult;
-//    }
-//  })
-//  .catch((err) => {
-//    console.log(err.message, err.code);
-//  });
-
-
-
-
-//const instructions = Platform.select({
-//  ios: 'Press Cmd+R to reload,\n' +
-//    'Cmd+D or shake for dev menu',
-//  android: 'Double tap R on your keyboard to reload,\n' +
-//    'Shake or press menu button for dev menu',
-//});
-//
-//
-//const tfImageRecognition = new TfImageRecognition({
-//  model: require('./android/assets/retrained_graph_v5.pb'),
-//  labels: require('./assets/retrained_labels_v5.txt'),
-//  imageMean: 117, // Optional, defaults to 117
-//  imageStd: 1 // Optional, defaults to 1
-//})
 
 type Props = {};
 export default class App extends Component<Props> {
