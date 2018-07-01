@@ -3,6 +3,8 @@ package com.camera;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.RNFetchBlob.RNFetchBlobPackage;
+import com.reactlibrary.RNImgToBase64Package;
 //import com.benwixen.rnfilesystem.RNFileSystemPackage;
 //import com.vinzscam.reactnativefileviewer.RNFileViewerPackage;
 //import com.benwixen.rnfilesystem.RNFileSystemPackage;
@@ -30,6 +32,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFetchBlobPackage(),
+            new RNImgToBase64Package(),
 //            new RNFileSystemPackage(),
 //            new RNFileViewerPackage(),
 //            new RNFileSystemPackage(),

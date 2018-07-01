@@ -1,4 +1,8 @@
 rootProject.name = 'camera'
+include ':react-native-fetch-blob'
+project(':react-native-fetch-blob').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fetch-blob/android')
+include ':react-native-convert-image-to-base64'
+project(':react-native-convert-image-to-base64').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-convert-image-to-base64/android')
 //include ':react-native-filesystem'
 //project(':react-native-filesystem').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-filesystem/android')
 //include ':react-native-file-viewer'

@@ -46,6 +46,8 @@
 		9D0C1B44AF3F4A5C8168E907 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E11006B15834EA5AA80033F /* libRNFS.a */; };
 		E68517C7FC084A43B26FFBD3 /* retrained_graph_v5.pb in Resources */ = {isa = PBXBuildFile; fileRef = AA1C10ED45064016A37EE06C /* retrained_graph_v5.pb */; };
 		85F89ABC1598456184AA9681 /* retrained_labels_v5.txt in Resources */ = {isa = PBXBuildFile; fileRef = EA8D66AC4BB046B38CD2204C /* retrained_labels_v5.txt */; };
+		A01CE1CB83B0457A89A98752 /* libRNImgToBase64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 285976F6E8434BDAAF8B5290 /* libRNImgToBase64.a */; };
+		78261615213447B198584428 /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D4B71A26524EE89047859B /* libRNFetchBlob.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +368,10 @@
 		6E11006B15834EA5AA80033F /* libRNFS.a */ = {isa = PBXFileReference; name = "libRNFS.a"; path = "libRNFS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		AA1C10ED45064016A37EE06C /* retrained_graph_v5.pb */ = {isa = PBXFileReference; name = "retrained_graph_v5.pb"; path = "../android/src/main/assets/retrained_graph_v5.pb"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		EA8D66AC4BB046B38CD2204C /* retrained_labels_v5.txt */ = {isa = PBXFileReference; name = "retrained_labels_v5.txt"; path = "../android/src/main/assets/retrained_labels_v5.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A66139F9875640D5981B6C7C /* RNImgToBase64.xcodeproj */ = {isa = PBXFileReference; name = "RNImgToBase64.xcodeproj"; path = "../node_modules/react-native-convert-image-to-base64/ios/RNImgToBase64.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		285976F6E8434BDAAF8B5290 /* libRNImgToBase64.a */ = {isa = PBXFileReference; name = "libRNImgToBase64.a"; path = "libRNImgToBase64.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		1338D4E8DEF1451EBC94DF15 /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; name = "RNFetchBlob.xcodeproj"; path = "../node_modules/react-native-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		A0D4B71A26524EE89047859B /* libRNFetchBlob.a */ = {isa = PBXFileReference; name = "libRNFetchBlob.a"; path = "libRNFetchBlob.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,6 +406,8 @@
 				10237EC5F5C146CA97ED7C35 /* libRNFileSystem.a in Frameworks */,
 				A7DE0C0D62E24A3E99586FE1 /* libRNDeviceInfo.a in Frameworks */,
 				9D0C1B44AF3F4A5C8168E907 /* libRNFS.a in Frameworks */,
+				A01CE1CB83B0457A89A98752 /* libRNImgToBase64.a in Frameworks */,
+				78261615213447B198584428 /* libRNFetchBlob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,6 +601,8 @@
 				A302DA921E3849D7ABB5D6B8 /* RNFileSystem.xcodeproj */,
 				6BB25FC75D2740F5AEAA0138 /* RNDeviceInfo.xcodeproj */,
 				8647A7496F67414C87D18E3C /* RNFS.xcodeproj */,
+				A66139F9875640D5981B6C7C /* RNImgToBase64.xcodeproj */,
+				1338D4E8DEF1451EBC94DF15 /* RNFetchBlob.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1239,6 +1249,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1248,6 +1260,8 @@
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)/../node_modules/react-native-convert-image-to-base64/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 				);
 			};
 			name = Debug;
@@ -1275,6 +1289,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1284,6 +1300,8 @@
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)/../node_modules/react-native-convert-image-to-base64/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 				);
 			};
 			name = Release;
@@ -1311,6 +1329,8 @@
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)/../node_modules/react-native-convert-image-to-base64/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 				);
 			};
 			name = Debug;
@@ -1337,6 +1357,8 @@
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)/../node_modules/react-native-convert-image-to-base64/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 				);
 			};
 			name = Release;
@@ -1373,6 +1395,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1382,6 +1406,8 @@
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)/../node_modules/react-native-convert-image-to-base64/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 				);
 			};
 			name = Debug;
@@ -1418,6 +1444,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1427,6 +1455,8 @@
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)/../node_modules/react-native-convert-image-to-base64/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 				);
 			};
 			name = Release;
@@ -1462,6 +1492,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1471,6 +1503,8 @@
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)/../node_modules/react-native-convert-image-to-base64/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 				);
 			};
 			name = Debug;
@@ -1506,6 +1540,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1515,6 +1551,8 @@
 					"$(SRCROOT)/../node_modules/react-native-filesystem/ios/RNFileSystem",
 					"$(SRCROOT)/../node_modules/react-native-device-info/ios/RNDeviceInfo",
 					"$(SRCROOT)/../node_modules/react-native-fs/**",
+					"$(SRCROOT)/../node_modules/react-native-convert-image-to-base64/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
 				);
 			};
 			name = Release;
